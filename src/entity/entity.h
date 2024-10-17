@@ -5,8 +5,8 @@ typedef struct {
   int health, x, y;
 } Entity;
 
-Entity* create_entity(int, int, int);
-void render_entity(Entity*);
-void destroy_entity(Entity*);
+Entity* Entity_create(int, int, int);
+void Entity_render(Entity*);
+void Entity_destroy(Entity*);
 
 #endif

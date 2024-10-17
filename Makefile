@@ -3,11 +3,12 @@ CFLAGS = -Wall
 SRC = $(wildcard src/*.c src/*/*.c)
 OBJ = $(SRC:.c=.o)
 TARGET = main
+LDFLAGS = -lSDL2
 
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -lSDL2 -o $(TARGET) $(OBJ)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET) $(OBJ)
 
 run:
 	./main

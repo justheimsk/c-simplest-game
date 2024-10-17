@@ -2,6 +2,7 @@
 #define GLOBAL_H
 
 #include <SDL2/SDL_render.h>
+#include "../entity/entity_manager.h"
 
 typedef struct {
   SDL_Renderer *renderer;
@@ -9,5 +10,12 @@ typedef struct {
 } App;
 
 extern App app;
+
+typedef struct {
+  EntityManager* entity_manager;
+} State;
+
+extern State state;
+void init_global_state(void);
 
 #endif
