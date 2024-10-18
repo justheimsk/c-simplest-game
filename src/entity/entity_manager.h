@@ -13,5 +13,6 @@ EntityManager* EntityManager_create(void);
 void EntityManager_destroy(EntityManager*);
 void EntityManager_append(Entity*);
 void EntityManager_render(void);
+void EntityManager_update(void);
 
 #endif

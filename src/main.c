@@ -39,6 +39,7 @@ int main()
     SDL_SetRenderDrawColor(app.renderer, 0, 0, 0, 1);
     SDL_RenderClear(app.renderer);
 
+    EntityManager_update();
     EntityManager_render();
 
     SDL_RenderPresent(app.renderer);

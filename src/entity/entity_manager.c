@@ -26,6 +26,13 @@ void EntityManager_render(void)
   }
 }
 
+void EntityManager_update()
+{
+  for(int i = 0; i < state.entity_manager->count; i++) {
+    Entity_update(&state.entity_manager->entities[i]);
+  }
+}
+
 void EntityManager_destroy(EntityManager* manager)
 {
   for (int i = 0; i < state.entity_manager->count; i++) {
